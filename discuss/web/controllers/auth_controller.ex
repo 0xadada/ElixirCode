@@ -11,7 +11,6 @@ defmodule Discuss.AuthController do
       provider: "github"}
     changeset = User.changeset(%User{}, user_params)
 
-    insert_or_update_user(changeset)
     signin(conn, changeset)
   end
 
